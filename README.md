@@ -1,9 +1,8 @@
 # QuizApp-Alaalser
-git checkout -b "First-branch"
-touch
-git add .
-git commit -m "   "
-git push origin Branch-Name
-// github pull requiste then add merge 
-git checkout main
-git pull
+This is quiz page app was built in js html css
+It test General information
+It take me a long time and huge effort to do it
+I learned new things in JS
+
+And finally,
+Enjoy

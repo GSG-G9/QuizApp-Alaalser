@@ -1,13 +1,13 @@
 let questions =[
   {question:"Who is the main character of Harry Potter? ",answers:["Harry Potter","Hermione Granger","Voldemort","Ron Weasley"],correctAnswer:"Harry Potter"},
   {question:"What color is the sky? ",answers:["green","yellow","red","blue"],correctAnswer:"blue"},
-  {question:"Which season is the hottest ",answers:["Winter","Summer","Spring","Autumn"],correctAnswer:"Summer"},
+  {question:"Which season is the hottest ? ",answers:["Winter","Summer","Spring","Autumn"],correctAnswer:"Summer"},
   {question:"The UK is made up of the following countries: England, Ireland, Wales, and",answers:["France","Hungary","Scotland","Austria"],correctAnswer:"Scotland"},
   {question:"What animal is associated with ancient Egypt?",answers:["lion","cat","hummingbird","rabbit"],correctAnswer:"cat"},
   {question:"What do you call a baby goat?",answers:["kid","goatee","childe","baby goat"],correctAnswer:"kid"},
   {question:"What is the most populous city in Canada? ",answers:["Toronto","Ontario","Quebec","Vancouver"],correctAnswer:"Toronto"},
   {question:"What is the most populous city in the world?",answers:["Gaza strip","Gaza strip","Gaza strip","Gaza strip"],correctAnswer:"Gaza strip"},
-  {question:"What is the longest running TV show?",answers:["The Simpsons","Law & Order","Anatomy","Criminal Minds"],correctAnswer:"The Simpsons"},
+  {question:"What is the longest running TV show?",answers:["The Simpsons","Law & Order","clAnatomy","Criminal Minds"],correctAnswer:"The Simpsons"},
   {question:"What is the complementary color of green?",answers:["blue","red","yellow","purple"],correctAnswer:"red"}
 ];
 let leaderboard = [
