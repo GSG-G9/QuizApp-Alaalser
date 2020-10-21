@@ -7,7 +7,7 @@ let questions =[
   {question:"What do you call a baby goat?",answers:["kid","goatee","childe","baby goat"],correctAnswer:"kid"},
   {question:"What is the most populous city in Canada? ",answers:["Toronto","Ontario","Quebec","Vancouver"],correctAnswer:"Toronto"},
   {question:"What is the most populous city in the world?",answers:["Gaza strip","Gaza strip","Gaza strip","Gaza strip"],correctAnswer:"Gaza strip"},
-  {question:"What is the longest running TV show?",answers:["The Simpsons","Law & Order","Grey’s Anatomy","Criminal Minds"],correctAnswer:"The Simpsons"},
+  {question:"What is the longest running TV show?",answers:["The Simpsons","Law & Order","Anatomy","Criminal Minds"],correctAnswer:"The Simpsons"},
   {question:"What is the complementary color of green?",answers:["blue","red","yellow","purple"],correctAnswer:"red"}
 ];
 let leaderboard = [
@@ -49,4 +49,82 @@ function showleaderboard(arr,container){
   leaderboardCont.style.display ="none"
   startCont.style.display="flex"
 }
+}
+
+document.getElementById("startBut").onclick =()=>{
+  let inputName =document.getElementById ("name").value;
+  if(inputName !==""){
+      newName=inputName;
+      startCont.style.display ="none"
+      questionCont.style.display="flex"
+  }
+}
+
+function showOneQuestion(question,answers,correctAnswer){
+
+  let theAnswer =``;
+  answers.forEach((x,i)=>{
+      theAnswer += `<input type="radio" name="option" class="option" value =${x} for=${"option"+i}/>
+          <label for=${"option"+i}>${x}</label>`
+
+  })
+  cor = correctAnswer
+  return `<div>
+              <p>${numSolve +"/10"}</p>
+              <h3>${question}</h3>
+              <div>
+                  ${theAnswer}
+                  <button id="next">next Answer</button>
+              </div>
+          </div>`
+}
+
+function showRandomQuestion(questions,contQuestion){
+  let randomIndex = Math.floor(Math.random()*(questions.length-1));
+  let {question,answers,correctAnswer} = questions[randomIndex];
+  contQuestion.innerHTML = showOneQuestion(question,answers,correctAnswer);
+  
+  document.getElementById("next").onclick= ()=>{
+      
+      const options = document.querySelectorAll('input[name="option"]');
+      let selectedValue;
+      for (const option of options) {
+          if (option.checked) {
+              selectedValue = option.value;
+              break;
+          }
+      }
+      (cor === selectedValue)?result++:null;
+      numSolve++;
+      if(numSolve <10){
+          showRandomQuestion(myData,questionCont)
+      }else{
+          document.getElementById("next").innerText = "Save Solution";
+          questionCont.style.display="none";
+          endResultCont.style.display ="flex";
+          let leader= SearchName(myDoard,newName);
+          if(leader !==-1){
+              myDoard[leader]={name:newName,degree:result};
+          }else{
+              myDoard.push({name:newName,degree:result})
+          }
+          
+
+          document.getElementById("endResult").innerText = result
+      }
+  }
+}
+showRandomQuestion(myData,questionCont);
+
+document.getElementById("showLeaderboard").onclick= ()=>{
+  showleaderboard(myDoard,leaderboardCont);
+  endResultCont.style.display ="none"
+  leaderboardCont.style.display="flex"
+}
+
+document.getElementById("repeatGame").onclick=()=>{
+  numSolve =1;
+  result=0;
+  endResultCont.style.display ="none"
+  startCont.style.display="flex"
 }
