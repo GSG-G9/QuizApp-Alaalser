@@ -5,12 +5,17 @@
 
 }
 
+body{
+background-color:rgb(104, 164, 182);
+}
+
 #startCont{
   width: 70%;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color:  #FAE3BB;
 }
 #startCont *{
   margin: 15px auto ;
@@ -28,10 +33,15 @@
 
 #questionCont{
   display: none;
-  width: 70%;
+  width: 90%;
   margin: 100px auto ;
   padding: 100px;
   padding-left: 400px;
+  background-color: ;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: lightsteelblue;
+
 }
 
 #endResultCont{
@@ -47,5 +57,56 @@
   padding: 100px;
 
 }
+#next{
+  padding: 10px;
+  margin: 10px;
+  font-size: 30px;
+  background:  rgb(39, 173, 164);
+  display: block;
+}
+
+.option{
+  padding: 30px;
+  margin: 30px;
+  font-size: 30px;
+  background:  rgb(39, 173, 164);
+}
+
+#startBut{
+  font-size: 30px;
+  background: rgb(39, 173, 164);
+}
 
 
+#showLeaderboard{
+  padding: 10px;
+  margin: 30px;
+  font-size: 30px;
+  background:  rgb(39, 173, 164);
+  display: block;
+}
+
+#repeatGame{
+  padding: 10px;
+  margin: 30px;
+  font-size: 30px;
+  background:  rgb(39, 173, 164);
+  display: block;
+}
+
+
+#repeatGame2{
+  padding: 10px;
+  margin: 30px;
+  font-size: 30px;
+  background:  rgb(39, 173, 164);
+  display: block;
+}
+
+#endResult{
+  padding: 10px;
+  margin: 30px;
+  font-size: 30px;
+  background:  rgb(39, 173, 164);
+  display: block;
+}
