@@ -8,4 +8,4 @@ And finally,
 Enjoy
 
 
-https://gsg-g9.github.io/QuizApp-Alaalser/
+https://gsg-g9.github.io/QuizApp-Alaalser/Index.html
